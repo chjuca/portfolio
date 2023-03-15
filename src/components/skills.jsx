@@ -1,4 +1,4 @@
-import { Card,CardBody, CardHeader , Tag, Avatar, TagLabel, Text } from "@chakra-ui/react"
+import { Card,CardBody, CardHeader , Tag, Avatar, TagLabel, Heading } from "@chakra-ui/react"
 
 export function Skill() {
     const skills = [
@@ -11,12 +11,66 @@ export function Skill() {
             name: "React",
             icon: "react",
             color: "blue"
-        }
+        },
+        {
+            name: "CSS",
+            icon: "css-modules",
+            color: "white"
+        },
+        {
+            name: "Docker",
+            icon: "docker",
+            color: "blue"
+        },
+        {
+            name: "Express",
+            icon: "express",
+            color: "gray"
+        },
+        {
+            name: "Git",
+            icon: "git",
+            color: "orange"
+        },
+        {
+            name: "GitHub",
+            icon: "github",
+            color: "gray"
+        },{
+            name: "MongoDB",
+            icon: "mongodb",
+            color: "green"
+        },
+        {
+            name: "PostgresQL",
+            icon: "postgresql",
+            color: "blue"
+        },
+        {
+            name: "Mongoose",
+            icon: "mongoose",
+            color: "red"
+        },
+        {
+            name: "Sequelize",
+            icon: "sequelize",
+            color: "blue"
+        },
+        {
+            name: "Node",
+            icon: "node",
+            color: "green"
+        },
+        {
+            name: "TypeScript",
+            icon: "typescript",
+            color: "blue"
+        },
     ]
     return (
-        <Card maxW="md" m={5} boxShadow='base' p='6' rounded='md' bg='white'>
+        <Card maxW="lg" m={5} boxShadow='base' p='4' rounded='md' bg='white'>
             <CardHeader>
-                <Text>Skills</Text>
+                <Heading size="md">Skills</Heading>
             </CardHeader>
             <CardBody>
             {
@@ -37,3 +91,15 @@ export function Skill() {
         </Card>
     )
 }
+
+
+// styled-components
+
+// https://fullstackopen.com/en/
+
+
+// https://roadmap.sh/react
+
+
+
+// https://www.remax.com.ec/

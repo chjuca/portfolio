@@ -3,7 +3,7 @@ import { Card, CardBody, CardFooter, Image, Stack, Heading, Divider, UnorderedLi
 export function Information() {
     const icons = ["github", "instagram", "linkedin"]
     return (
-        <Card maxW="md" m={5} boxShadow='base' p='6' rounded='md' bg='white'>
+        <Card maxW="lg" m={5} boxShadow='base' p='6' rounded='md' bg='white'>
             <CardBody>
                 <Center>
                 <Image
