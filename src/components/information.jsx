@@ -1,35 +1,37 @@
-import { Card, CardBody, CardFooter, Image, Stack, Heading, Divider, UnorderedList, ListItem, Center} from "@chakra-ui/react";
+import { Card, CardBody, Image, Stack, Heading, Center, Text, Button} from "@chakra-ui/react";
 
 export function Information() {
-    const icons = ["github", "instagram", "linkedin"]
+    const icons = ["mail", "github", "linkedin", "instagram"]
     return (
         <Card maxW="lg" m={5} boxShadow='base' p='6' rounded='md' bg='white'>
-            <CardBody>
-                <Center>
+            <CardBody p={2}>
+                <Center p={2}>
                 <Image
                     borderRadius='full'
-                    boxSize='150px'
+                    boxSize="10em"
                     src='https://avatars.githubusercontent.com/u/38107744?v=4'
                     alt='chjuca'
                 />
                 </Center>
-                <Stack mt="6" spacing="3">
-                    <Heading size="md">Hello World! 👋</Heading>
-                    <UnorderedList>
-                        <ListItem>🔭 I'm currently working on Lazarillo</ListItem>
-                        <ListItem>🌱 I'm currently learning React JS and I like to do daily LeetCode challenges.</ListItem>
-                    </UnorderedList>
+                <Stack p={2} spacing="5" align={"center"}>
+                    <Heading size="xl">Carlos Juca</Heading>
+                    <Text fontSize='2xl'>FullStack Developer</Text>
+                    <Text fontSize='lg' color="gray" >@chjuca</Text>
+
+                    <Button colorScheme='blue' width='6em' p={2}>Contact</Button>
                 </Stack>
-            </CardBody>
-            <Divider />
-            <Center>
-            <CardFooter>
+                <Center p={2}>
                 {icons.map(icon => (
-                    <Image m={2} boxSize='4em' src={require(`./../assets/${icon}.png`)} alt={`${icon}`} key={`${icon}`} />
+                    <Image m={2} boxSize='2em' src={require(`./../assets/${icon}.svg`)} alt={`${icon}`} key={`${icon}`} />
                 ))
                 }
-            </CardFooter>
-            </Center>
+                </Center>
+            </CardBody>
+            <Stack  spacing={5}>
+            <Heading size="md">About me</Heading>
+                <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi porro autem ipsum et maiores quibusdam similique. Iusto necessitatibus, praesentium ipsa iure eveniet numquam illo incidunt unde tempora, ipsam soluta alias.</Text>
+        
+            </Stack >
         </Card>
     );
 }

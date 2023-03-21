@@ -26,7 +26,7 @@ export function GitHub() {
     <Box m={5} boxShadow='base' p='6' rounded='md' bg='white'>
       <SimpleGrid
         spacing={4}
-        templateColumns="repeat(auto-fill, minmax(300px, 1fr))"
+        templateColumns="repeat(auto-fill, minmax(20em, 1fr))"
       >
         {repos.map((repo) => (
           <Card key={repo.id}>

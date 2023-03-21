@@ -1,7 +1,7 @@
-import { Card,CardBody, CardHeader , Tag, Avatar, TagLabel, Heading } from "@chakra-ui/react"
+import { Tag, Avatar, TagLabel, Heading, Stack, Box } from "@chakra-ui/react"
 
-export function Skill() {
-    const skills = [
+export function Tools() {
+    const tools = [
         {
             name: "Angular",
             icon: "angular",
@@ -68,27 +68,25 @@ export function Skill() {
         },
     ]
     return (
-        <Card maxW="lg" m={5} boxShadow='base' p='4' rounded='md' bg='white'>
-            <CardHeader>
-                <Heading size="md">Skills</Heading>
-            </CardHeader>
-            <CardBody>
+        <Stack boxShadow='base' p='4' rounded='md' bg='white' spacing={"4"}>
+                <Heading size="md">Tools</Heading>
+                <Box>
             {
-                skills.map(skill => (
-                    <Tag size='lg' colorScheme={skill.color} borderRadius='full' key={skill.name} m={2}>
+                tools.map(tool => (
+                    <Tag size='lg' colorScheme={tool.color} borderRadius='full' key={tool.name} m={2}>
                         <Avatar
-                            src={require(`../assets/technologies/${skill.icon}.png`)}
+                            src={require(`../assets/technologies/${tool.icon}.png`)}
                             size='xs'
-                            name={skill.name}
+                            name={tool.name}
                             ml={-1}
                             mr={2}
                         />
-                        <TagLabel>{skill.name}</TagLabel>
+                        <TagLabel>{tool.name}</TagLabel>
                     </Tag>
                 ))
             }
-            </CardBody>
-        </Card>
+                </Box>
+        </Stack>
     )
 }
 
