@@ -1,4 +1,4 @@
-import { Box, Heading, Text, CardBody, Card, CardHeader, Flex, Avatar, Image, Grid, SimpleGrid } from "@chakra-ui/react"
+import { Box, Heading, Text, CardBody, Card, CardHeader, Flex, Avatar, Image, SimpleGrid } from "@chakra-ui/react"
 
 export function Projects() {
 

@@ -1,9 +1,7 @@
 import * as React from "react";
 import {
-  Center,
   ChakraProvider,
   Box,
-  HStack,
   Stack,
   SimpleGrid,
 } from "@chakra-ui/react";
