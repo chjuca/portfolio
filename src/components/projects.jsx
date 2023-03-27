@@ -7,30 +7,23 @@ export function Projects() {
             img: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
             place: "Departamento del LiiD",
             placeImg: "https://bit.ly/sage-adebayo",
-            position: "Backend Developer",
-            summary: "With Chakra UI, I wanted to sync the speed of development with the speed of design. I wanted the developer to be just as excited as the designer to create a screen."
+            name: "Backend Developer",
+            summary: "Developed an API for the Investigación e Innovación Docente web page using Node.js Modeled and implemented a PostgreSQL database."
+        },
+        {
+            img: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+            place: "Web Applications",
+            placeImg: "https://bit.ly/sage-adebayo",
+            name: "REAS -UTPL",
+            summary: "Application developed in the field of Web Applications where you can consult the resources uploaded on the platform, whether they are videos, images or texts. This application was made with Angular 8 and connection to the firebase database."
         },
         {
             img: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
             place: "Departamento del LiiD",
             placeImg: "https://bit.ly/sage-adebayo",
-            position: "Backend Developer",
-            summary: "With Chakra UI, I wanted to sync the speed of development with the speed of design. I wanted the developer to be just as excited as the designer to create a screen."
+            name: "LIV Application",
+            summary: "Application developed for the laboratory of the LiiD UTPL with the objective of consulting the resources uploaded by the teacher of the subject of Pharmacology, which includes a division by units, filters by subject and the option of taking student evaluations.."
         },
-        {
-            img: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
-            place: "Departamento del LiiD",
-            placeImg: "https://bit.ly/sage-adebayo",
-            position: "Backend Developer",
-            summary: "With Chakra UI, I wanted to sync the speed of development with the speed of design. I wanted the developer to be just as excited as the designer to create a screen."
-        },
-        {
-            img: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
-            place: "Departamento del LiiD",
-            placeImg: "https://bit.ly/sage-adebayo",
-            position: "Backend Developer",
-            summary: "With Chakra UI, I wanted to sync the speed of development with the speed of design. I wanted the developer to be just as excited as the designer to create a screen."
-        }
     ]
 
     return (
@@ -50,7 +43,7 @@ export function Projects() {
                                 <Avatar name='Segun Adebayo' src={project.placeImg} />
                                 <Box>
                                     <Heading size='sm'>{project.place}</Heading>
-                                    <Text>{project.position}</Text>
+                                    <Text>{project.name}</Text>
                                 </Box>
                             </Flex>
                         </Flex>
