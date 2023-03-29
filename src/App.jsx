@@ -10,6 +10,7 @@ import { Tools } from "./components/tools";
 import { GitHub } from "./components/github";
 import { SoftSkill } from "./components/softSkills";
 import { Projects } from "./components/projects";
+import { Experience } from "./components/experience";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             </Box>
           </SimpleGrid>
           <Projects />
+          <Experience/>
         </Box>
       </Stack>
     </ChakraProvider>
