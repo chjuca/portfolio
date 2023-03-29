@@ -19,7 +19,7 @@ function App() {
         <Box width={["100%", "50%", "40%", "30%"]}>
           <Information />
         </Box>
-        <Box width={["100%", "50%", "60%", "70%"]}>
+        <Box width={["100%", "50%", "60%", "70%"]} overflowY="auto" maxHeight="100em">
           <GitHub />
           <SimpleGrid columns={[1, 1, 1, 2]} gap={2} spacing={10} m={5}>
             <Box>

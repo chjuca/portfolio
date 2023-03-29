@@ -31,7 +31,7 @@ export function Projects() {
             <Heading size="md" p={4}>Projects</Heading>
             <SimpleGrid columns={[1, 1,1,3]} gap={3}>
             {projects.map(project => (
-                <Card maxW='sm' key={project.place}>
+                <Card maxW='sm' key={project.place + project.name}>
                     <Image
                         objectFit='cover'
                         src={require(`../assets/projects/${project.img}`) }

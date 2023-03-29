@@ -5,7 +5,7 @@ import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import { Card } from 'primereact/card';
 import './TimeLine.css';
-import { Avatar } from '@chakra-ui/react';
+import { Avatar, Heading } from '@chakra-ui/react';
 
 export function Experience() {
 
@@ -65,7 +65,7 @@ export function Experience() {
         <p className="m-0"> <b>{item.role}</b></p>
         <div style={{padding: "1em"}}>
         <ul>
-          {item.tasks.map(task => <li>{task}</li>)}
+          {item.tasks.map((task, i) => <li key={i}>{task}</li>)}
         </ul>
         </div>
       </Card>
@@ -73,6 +73,7 @@ export function Experience() {
   };
   return (
     <div className="card">
+      <Heading size="md" p={4}>Experience</Heading>
       <Timeline value={experiences} align="alternate" className="customized-timeline" marker={customizedMarker} content={customizedContent} />
     </div>
   )
