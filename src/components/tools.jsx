@@ -89,15 +89,3 @@ export function Tools() {
         </Stack>
     )
 }
-
-
-// styled-components
-
-// https://fullstackopen.com/en/
-
-
-// https://roadmap.sh/react
-
-
-
-// https://www.remax.com.ec/

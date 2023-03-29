@@ -1,7 +1,8 @@
-import { Card, CardBody, Image, Stack, Heading, Center, Text, Button} from "@chakra-ui/react";
+import { Card, CardBody, Image, Stack, Heading, Center, Text, Button, Link} from "@chakra-ui/react";
 
 export function Information() {
-    const icons = ["mail", "github", "linkedin", "instagram"]
+    const icons = [{name:"mail", url: ""},{name:"github", url: "https://github.com/chjuca"},{name:"linkedin", url: "https://www.linkedin.com/in/chjuca/"},{name:"instagram", url: "https://www.linkedin.com/in/chjuca/"}]
+    
     return (
         <Card maxW="lg" m={5} boxShadow='base' p='6' rounded='md' bg='white'>
             <CardBody p={2}>
@@ -22,7 +23,9 @@ export function Information() {
                 </Stack>
                 <Center p={2}>
                 {icons.map(icon => (
-                    <Image m={2} boxSize='2em' src={require(`./../assets/${icon}.svg`)} alt={`${icon}`} key={`${icon}`} />
+                    <Link href={icon.url} isExternal>
+                        <Image m={2} boxSize='2em' src={require(`./../assets/${icon.name}.svg`)} alt={`${icon.name}`} key={`${icon.name}`} />
+                    </Link>
                 ))
                 }
                 </Center>
