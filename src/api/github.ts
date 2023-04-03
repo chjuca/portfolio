@@ -11,7 +11,7 @@ export async function getPinnedRepositories(){
         return {
           headers: {
             ...headers,
-            authorization: `Bearer ${process.env.GIT_TOKEN}`,
+            authorization: `Bearer ${process.env.REACT_APP_GIT_TOKEN}`,
           }
         }
       });
@@ -24,7 +24,7 @@ export async function getPinnedRepositories(){
       const { data } = await client.query({
         query: gql`
           {
-            user(login: "${process.env.GIT_USER}") {
+            user(login: "${process.env.REACT_APP_GIT_USER}") {
               pinnedItems(first: 6) {
                 totalCount
                 edges {
