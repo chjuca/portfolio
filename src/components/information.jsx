@@ -1,4 +1,4 @@
-import { Card, CardBody, Image, Stack, Heading, Center, Text, Button, Link} from "@chakra-ui/react";
+import { Card, CardBody, Image, Stack, Heading, Center, Text, Button, Link,ListItem,UnorderedList,} from "@chakra-ui/react";
 
 export function Information() {
     const icons = [{name:"mail", url: ""},{name:"github", url: "https://github.com/chjuca"},{name:"linkedin", url: "https://www.linkedin.com/in/chjuca/"},{name:"instagram", url: "https://www.linkedin.com/in/chjuca/"}]
@@ -32,8 +32,14 @@ export function Information() {
             </CardBody>
             <Stack  spacing={5}>
             <Heading size="md">About me</Heading>
-                <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi porro autem ipsum et maiores quibusdam similique. Iusto necessitatibus, praesentium ipsa iure eveniet numquam illo incidunt unde tempora, ipsam soluta alias.</Text>
-        
+            <Text>
+                <UnorderedList>
+                <ListItem>🔭 I’m currently working on Lazarillo</ListItem>
+                <ListItem>🌱 I’m currently learning React JS and I like to do daily LeetCode challenges.</ListItem>
+                <ListItem>💡 Totally geeking out on learning new things! 🌟.</ListItem>
+                <ListItem>🏗️ Dedicated to crafting digital experiences that not only meet but exceed user expectations.</ListItem>
+                </UnorderedList>
+            </Text>
             </Stack >
         </Card>
     );
