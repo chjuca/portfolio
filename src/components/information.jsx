@@ -1,8 +1,19 @@
 import { Card, CardBody, Image, Stack, Heading, Center, Text, Button, Link,ListItem,UnorderedList,} from "@chakra-ui/react";
 
 export function Information() {
-    const icons = [{name:"mail", url: ""},{name:"github", url: "https://github.com/chjuca"},{name:"linkedin", url: "https://www.linkedin.com/in/chjuca/"},{name:"instagram", url: "https://www.linkedin.com/in/chjuca/"}]
+    const icons = [{name:"mail", url: ""},{name:"github", url: "https://github.com/chjuca"},{name:"linkedin", url: "https://www.linkedin.com/in/chjuca/"}]
     
+
+    const onButtonClick = () => {
+        const pdfUrl = "https://drive.google.com/file/d/1AUyvDC8a1UGDh6GmOLpjnEjy0xWo4VVT/view?usp=drive_link";
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = "Carlos Homero Juca Viteri.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
     return (
         <Card maxW="lg" m={5} boxShadow='base' p='6' rounded='md' bg='white'>
             <CardBody p={2}>
@@ -40,6 +51,9 @@ export function Information() {
                 <ListItem>🏗️ Dedicated to crafting digital experiences that not only meet but exceed user expectations.</ListItem>
                 </UnorderedList>
             </Text>
+            <Button onClick={onButtonClick}>
+                    Download CV
+            </Button>
             </Stack >
         </Card>
     );

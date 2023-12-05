@@ -5,13 +5,13 @@ import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import { Card } from 'primereact/card';
 import './TimeLine.css';
-import { Avatar, Heading } from '@chakra-ui/react';
+import { Avatar, Heading, Link} from '@chakra-ui/react';
 
 export function Experience() {
 
   const experiences = [
     {
-      place: 'Lazarillo', role: "Full Stack Developer", date: 'December 2021 - Present', image: "lazarillo.jpg", tasks:
+      place: 'Lazarillo', url: "https://lazarillo.app", role: "Full Stack Developer", date: 'December 2021 - Present', image: "lazarillo.jpg", tasks:
         ["Maintained and implemented new features on the backend related to route optimization, nearby locations retrieval, among others",
           "Maintained and implemented new features on the frontend related to the creation of maps and indoor routes",
           "Adapted open-source tools like IndoorEqual, OsmInEdit to internal company needs",
@@ -19,13 +19,13 @@ export function Experience() {
         ]
     },
     {
-      place: 'ExmerDev', role: "Backend Developer", date: 'Feb 2021 - Mar 2021',image: "exmerdev.jpeg", tasks:
+      place: 'ExmerDev', url: "https://exmerdev.com", role: "Backend Developer", date: 'Feb 2021 - Mar 2021',image: "exmerdev.jpeg", tasks:
         ["Maintained and implemented new functions in the backend related to managing roles, people and tasks",
           "Create and clearly document the use of APIs made by the team"
         ]
     },
     {
-      place: 'Laboratorio de Innovación e Investigación Docente', role: "Full Stack Developer", date: 'Apr 2021 - Ago 2021',image: "liid.jpeg", tasks:
+      place: 'Laboratorio de Innovación e Investigación Docente', url: "https://liidutpl.ec", role: "Full Stack Developer", date: 'Apr 2021 - Ago 2021',image: "liid.jpeg", tasks:
         ["Led and managed a team of web developers for the LiiD Manager web platform",
           "Coordinated project staff activities to ensure projects progressed according to the established timeline",
           "Developed an API for the management of attendance, people, and materials present in the Research and Teaching Innovation Laboratory",
@@ -33,12 +33,12 @@ export function Experience() {
         ]
     },
     {
-      place: 'Laboratorio de Innovación e Investigación Docente', role: "Backend Department Leader", date: 'Apr2020 -Feb 2021', image: "liid.jpeg",tasks:
+      place: 'Laboratorio de Innovación e Investigación Docente',  url: "https://liidutpl.ec", role: "Backend Department Leader", date: 'Apr2020 -Feb 2021', image: "liid.jpeg",tasks:
         ["Lead backend team and deployment of web platforms in areas of: health, education",
         ]
     },
     {
-      place: 'Laboratorio de Innovación e Investigación Docente', role: "Backend Developer", date: 'Oct 2019 - Feb 202',image: "liid.jpeg", tasks:
+      place: 'Laboratorio de Innovación e Investigación Docente', url: "https://liidutpl.ec", role: "Backend Developer", date: 'Oct 2019 - Feb 202',image: "liid.jpeg", tasks:
         ["Developed an API for the Investigación e Innovación Docente web page using Node.js",
           "Modeled and implemented a PostgreSQL database"
         ]
@@ -61,14 +61,16 @@ export function Experience() {
 
   const customizedContent = (item) => {
     return (
-      <Card title={item.place} subTitle={item.date}>
-        <p className="m-0"> <b>{item.role}</b></p>
-        <div style={{padding: "1em"}}>
-        <ul>
-          {item.tasks.map((task, i) => <li key={i}>{task}</li>)}
-        </ul>
-        </div>
-      </Card>
+      <Link style={{textDecoration: 'none'}} href={item.url} isExternal>
+        <Card title={item.place} subTitle={item.date}>
+          <p className="m-0"> <b>{item.role}</b></p>
+          <div style={{padding: "1em"}}>
+          <ul>
+            {item.tasks.map((task, i) => <li key={i}>{task}</li>)}
+          </ul>
+          </div>
+        </Card>
+      </Link>
     );
   };
   return (

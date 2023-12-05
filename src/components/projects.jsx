@@ -1,4 +1,4 @@
-import { Box, Heading, Text, CardBody, Card, CardHeader, Flex, Avatar, Image, SimpleGrid } from "@chakra-ui/react"
+import { Box, Heading, Text, CardBody, Card, CardHeader, Flex, Avatar, Image, SimpleGrid, Link} from "@chakra-ui/react"
 
 export function Projects() {
 
@@ -6,6 +6,7 @@ export function Projects() {
         {
             img: "liid.png",
             place: "Departamento del LiiD",
+            url: "https://ascendere.utpl.edu.ec",
             placeImg: "liid.jpeg",
             name: "Backend Developer",
             summary: "Developed an API for the Investigación e Innovación Docente web page using Node.js Modeled and implemented a PostgreSQL database."
@@ -31,29 +32,31 @@ export function Projects() {
             <Heading size="md" p={4}>Projects</Heading>
             <SimpleGrid columns={[1, 1,1,3]} gap={3}>
             {projects.map(project => (
-                <Card maxW='sm' key={project.place + project.name}>
-                    <Image
-                        objectFit='cover'
-                        src={require(`../assets/projects/${project.img}`) }
-                        alt='Chakra UI'
-                    />
-                    <CardHeader>
-                        <Flex spacing='2'>
-                            <Flex flex='2' gap='4' alignItems='center' flexWrap='wrap'>
-                                <Avatar name='Segun Adebayo' src={require(`../assets/places/${project.placeImg}`)} />
-                                <Box>
-                                    <Heading size='sm'>{project.place}</Heading>
-                                    <Text>{project.name}</Text>
-                                </Box>
+                <Link style={{textDecoration: 'none'}} href={project.url} isExternal>
+                    <Card maxW='sm' key={project.place + project.name}>
+                        <Image
+                            objectFit='cover'
+                            src={require(`../assets/projects/${project.img}`) }
+                            alt='Chakra UI'
+                        />
+                        <CardHeader>
+                            <Flex spacing='2'>
+                                <Flex flex='2' gap='4' alignItems='center' flexWrap='wrap'>
+                                    <Avatar name='Segun Adebayo' src={require(`../assets/places/${project.placeImg}`)} />
+                                    <Box>
+                                        <Heading size='sm'>{project.place}</Heading>
+                                        <Text>{project.name}</Text>
+                                    </Box>
+                                </Flex>
                             </Flex>
-                        </Flex>
-                    </CardHeader>
-                    <CardBody>
-                        <Text>
-                            {project.summary}
-                        </Text>
-                    </CardBody>
-                </Card>
+                        </CardHeader>
+                        <CardBody>
+                            <Text>
+                                {project.summary}
+                            </Text>
+                        </CardBody>
+                    </Card>
+                </Link>
             ))}
             </SimpleGrid>
         </Box>
